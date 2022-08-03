@@ -25,6 +25,7 @@ let a = 1;
 }
 ```
 
+<!--truncate-->
 对于Function
 
 ```javascript

@@ -17,7 +17,7 @@ duration: 15min
 4. 可定制化高，像[vuepress](https://vuepress.vuejs.org/)和[docusaurus](https://docusaurus.io/)是写主题，改的话规矩比较多
 
    最后选择了大佬[Anthony Fu]([https://antfu.me](https://antfu.me/))自己写[vite-ssg](https://github.com/antfu/vite-ssg)的起手模板[vite-sse](https://github.com/antfu/vitesse)
-
+<!--truncate-->
 ### 遇到的问题
 
 首先vitesse这个起手模板已经给你解决太多问题，但是也太笨重了我后面搜素的时候看到一个lightweight的版本。

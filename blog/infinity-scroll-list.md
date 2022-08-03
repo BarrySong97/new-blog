@@ -9,6 +9,7 @@ codesandbox：https://codesandbox.io/s/infinity-scroll-list-u3k4n?file=/src/styl
 ![scroll-list423.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef8168421cfe4e47b039efc283b376b9~tplv-k3u1fbpfcp-watermark.image)
 思路很简单，原没有想象的那么复杂，只需要了一个css属性就可以实现，当然gif看着图有点抖这是正常的，实际观感会更顺滑一点。
 
+<!--truncate-->
 # 滚动特效
 ```css
  @keyframes mymove {
