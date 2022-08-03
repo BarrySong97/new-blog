@@ -1,0 +1,13 @@
+.contact-list div {
+    display: flex;
+    align-items: center;
+}
+
+.contact-list a {
+    margin-left: 4px;
+    font-weight: inherit;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid rgba(125, 125, 125, .3);
+    transition: border .3s ease-in-out;
+}
