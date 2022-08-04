@@ -1,4 +1,5 @@
 import React, { SVGProps } from "react";
+import Link from "@docusaurus/Link";
 import "./index.css";
 
 export function MdiGithub(props: SVGProps<SVGSVGElement>) {
@@ -52,22 +53,61 @@ export function MdiSinaWeibo(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IcBaselineWechat(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      <path
+        fill="currentColor"
+        d="M15.85 8.14c.39 0 .77.03 1.14.08C16.31 5.25 13.19 3 9.44 3c-4.25 0-7.7 2.88-7.7 6.43c0 2.05 1.15 3.86 2.94 5.04L3.67 16.5l2.76-1.19c.59.21 1.21.38 1.87.47c-.09-.39-.14-.79-.14-1.21c-.01-3.54 3.44-6.43 7.69-6.43zM12 5.89a.96.96 0 1 1 0 1.92a.96.96 0 0 1 0-1.92zM6.87 7.82a.96.96 0 1 1 0-1.92a.96.96 0 0 1 0 1.92z"
+      ></path>
+      <path
+        fill="currentColor"
+        d="M22.26 14.57c0-2.84-2.87-5.14-6.41-5.14s-6.41 2.3-6.41 5.14s2.87 5.14 6.41 5.14c.58 0 1.14-.08 1.67-.2L20.98 21l-1.2-2.4c1.5-.94 2.48-2.38 2.48-4.03zm-8.34-.32a.96.96 0 1 1 .96-.96c.01.53-.43.96-.96.96zm3.85 0a.96.96 0 1 1 0-1.92a.96.96 0 0 1 0 1.92z"
+      ></path>
+    </svg>
+  );
+}
 type Props = {};
 
 const ContactList = (props: Props) => {
+  const contactList = [
+    {
+      href: "https://weibo.com/u/2670904663",
+      icon: <MdiSinaWeibo />,
+      text: "微博",
+    },
+    {
+      href: "https://github.com/BarrySong97",
+      icon: <MdiGithub />,
+      text: "github",
+    },
+    {
+      href: "https://weibo.com/u/2670904663",
+      icon: <RiBilibiliFill />,
+      text: "BiliBili",
+    },
+    {
+      href: "",
+      icon: <IcBaselineWechat />,
+      text: "BarrySong97",
+    },
+  ];
   return (
     <div className="contact-list">
-      <div>
-        <MdiSinaWeibo /> <a>微博</a>
-      </div>
-      <div>
-        <MdiGithub />
-        <a>Github</a>
-      </div>
-      <div>
-        <RiBilibiliFill />
-        <a>Bilibili</a>
-      </div>
+      {contactList.map((v) => (
+        <div key={v.text}>
+          {v.icon}
+          <Link href={v.href}>{v.text}</Link>
+        </div>
+      ))}
     </div>
   );
 };

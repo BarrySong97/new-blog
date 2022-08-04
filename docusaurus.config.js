@@ -38,8 +38,6 @@ const config = {
           // Remove this to remove the "edit this page" links.
           blogSidebarCount: 5,
           postsPerPage: 15,
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

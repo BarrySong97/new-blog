@@ -1,32 +1,34 @@
 ---
 title: 变量提升？let到底有没有变量提升?
-date: 2022-3-22
-description: 现在看到了let和var，有讲到变量提升这个东西。这个时候我就有疑问，let变量提升吗？
+date: 2022-03-22T10:00
+authors: Barry
+tags: [JavaScript Basic, hoisting]
 ---
 
-最近在准备面试，所以开始复习以前的老知识。现在看到了let和var，有讲到变量提升这个东西。这个时候我就有疑问，let变量提升吗？
+最近在准备面试，所以开始复习以前的老知识。现在看到了 let 和 var，有讲到变量提升这个东西。这个时候我就有疑问，let 变量提升吗？
 
 ## 先回顾一下老知识
 
-对于var定义的变量
+对于 var 定义的变量
 
 ```javascript
 console.log(a); //undefined
 var a = 1;
 ```
 
-对于let定义的变量
+对于 let 定义的变量
 
 ```javascript
 let a = 1;
 {
-  console.log(a);//ReferenceError: a is not defined
+  console.log(a); //ReferenceError: a is not defined
   let a = 2;
 }
 ```
 
 <!--truncate-->
-对于Function
+
+对于 Function
 
 ```javascript
 hello(); // "hello"
@@ -41,8 +43,7 @@ hello(); // TypeError: hello is not a function
 
 var hello = () => {
   console.log("Hello");
-}
-
+};
 ```
 
 ```javascript
@@ -55,7 +56,6 @@ var hello = () => {
 function hello() {
   console.log("Hello1");
 }
-
 ```
 
 ```javascript
@@ -70,13 +70,11 @@ function hello() {
 }
 ```
 
-
-
 ### 所以就意味着`let`没有变量提升吗
 
 答案是否定的。
 
-所以直接在MDN上查了一下
+所以直接在 MDN 上查了一下
 
 [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)`Variable`和`Class`都有提升，但是区别就是`let`在提升的时候没有初始化一个值
 
@@ -86,7 +84,7 @@ Variables declared with `let` and `const` are also hoisted but, unlike `var`, ar
 
 接着变量提升我查到了新的东西
 
-`let` and `const` declarations define variables that are scoped to [the running execution context](https://262.ecma-international.org/6.0/#sec-execution-contexts)’s [LexicalEnvironment](https://262.ecma-international.org/6.0/#sec-execution-contexts). The variables are created when their containing [Lexical Environment](https://262.ecma-international.org/6.0/#sec-lexical-environments) is instantiated but may not be accessed in any way until the variable’s *LexicalBinding* is evaluated. A variable defined by a *LexicalBinding* with an *Initializer* is assigned the value of its *Initializer*’s *AssignmentExpression* when the *LexicalBinding* is evaluated, not when the variable is created. If a *LexicalBinding* in a `let` declaration does not have an *Initializer* the variable is assigned the value **undefined** when the *LexicalBinding* is evaluated.
+`let` and `const` declarations define variables that are scoped to [the running execution context](https://262.ecma-international.org/6.0/#sec-execution-contexts)’s [LexicalEnvironment](https://262.ecma-international.org/6.0/#sec-execution-contexts). The variables are created when their containing [Lexical Environment](https://262.ecma-international.org/6.0/#sec-lexical-environments) is instantiated but may not be accessed in any way until the variable’s _LexicalBinding_ is evaluated. A variable defined by a _LexicalBinding_ with an _Initializer_ is assigned the value of its _Initializer_’s _AssignmentExpression_ when the _LexicalBinding_ is evaluated, not when the variable is created. If a _LexicalBinding_ in a `let` declaration does not have an _Initializer_ the variable is assigned the value **undefined** when the _LexicalBinding_ is evaluated.
 
 Under the hood When the engine works with variables, their lifecycle consists of the following phases
 
@@ -98,7 +96,7 @@ Under the hood When the engine works with variables, their lifecycle consists of
 
 - 声明阶段
 
-  `var a`  | `let b`
+  `var a` | `let b`
 
   在词法环境里面声明这个变量，但是还不能通过任何方式访问
 
@@ -106,23 +104,21 @@ Under the hood When the engine works with variables, their lifecycle consists of
 
   `a = undefined`
 
-  var在这个时候绑定变量到包含自己的作用域，并且初始化了一个undefined的值，这个时候var可以访问了。
+  var 在这个时候绑定变量到包含自己的作用域，并且初始化了一个 undefined 的值，这个时候 var 可以访问了。
 
-  let虽然被创建了，但是他只能等到赋值的时候才能把自己绑定到作用域上，这个时候引擎已经知道。
+  let 虽然被创建了，但是他只能等到赋值的时候才能把自己绑定到作用域上，这个时候引擎已经知道。
 
-  也就说这个阶段，var和let都被提升了。而var是可以访问了，但是let不让访问。
+  也就说这个阶段，var 和 let 都被提升了。而 var 是可以访问了，但是 let 不让访问。
 
 - 赋值阶段
 
-  var在这个阶段发现赋值语句，把a原本的值undefined替换为2
+  var 在这个阶段发现赋值语句，把 a 原本的值 undefined 替换为 2
 
-  ​	`a = 2`
+  ​ `a = 2`
 
-  let先绑定到作用域上，并且分配内存赋值为2
+  let 先绑定到作用域上，并且分配内存赋值为 2
 
-  ​	`b = 2`
-
-
+  ​ `b = 2`
 
 ## 参考
 
@@ -131,5 +127,3 @@ Under the hood When the engine works with variables, their lifecycle consists of
 [Hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 
 [JavaScript Variables Lifecycle: Why let Is Not Hoisted](https://dmitripavlutin.com/variables-lifecycle-and-why-let-is-not-hoisted/#:~:text=When%20the%20engine%20works%20with,the%20variable%20in%20the%20scope.&text=Assignment%20phase%20is%20assigning%20a%20value%20to%20the%20initialized%20variable.)
-
-[Let and Const Declarations](
