@@ -12,7 +12,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.svg",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -53,8 +53,22 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
       },
+      // algolia: {
+      //   appId: "0UD76Q799Z",
+
+      //   // Public API key: it is safe to commit it
+      //   apiKey: "0a34a34395db0a52143909d43c1db065",
+
+      //   indexName: "blog",
+
+      //   // Optional: see doc section below
+      //   contextualSearch: true,
+      // },
       navbar: {
         title: "BarrySong4Real",
+        logo: {
+          src: "img/logo.svg",
+        },
         items: [
           { to: "/blog", label: "Blog", position: "right" },
           {

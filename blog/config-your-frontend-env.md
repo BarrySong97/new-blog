@@ -2,7 +2,7 @@
 title: 前端环境配置一些小问题
 date: 2021-05-09T10:00
 authors: Barry
-tags: [nvm, nodejs]
+tags: [nvm, nodejs, 环境配置]
 ---
 
 # 前言
