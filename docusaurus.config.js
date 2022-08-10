@@ -59,7 +59,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: "d1ca46629d989baf0770ae813a08cd90",
 
-        indexName: "blog",
+        indexName: "netlify_f5a2c39d-f76f-4ed6-ac05-eb3ac5119cd4_main_all",
 
         // Optional: see doc section below
         contextualSearch: true,
