@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "BarrySong4Real",
   tagline: "Dinosaurs are cool",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://barrysong.netlify.app/",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "BarrySong97", // Usually your GitHub org/user name.
+  projectName: "BarrySongBlog", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -53,17 +53,17 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
       },
-      // algolia: {
-      //   appId: "0UD76Q799Z",
+      algolia: {
+        appId: "0OBNE796HF",
 
-      //   // Public API key: it is safe to commit it
-      //   apiKey: "0a34a34395db0a52143909d43c1db065",
+        // Public API key: it is safe to commit it
+        apiKey: "d1ca46629d989baf0770ae813a08cd90",
 
-      //   indexName: "blog",
+        indexName: "blog",
 
-      //   // Optional: see doc section below
-      //   contextualSearch: true,
-      // },
+        // Optional: see doc section below
+        contextualSearch: true,
+      },
       navbar: {
         title: "BarrySong4Real",
         logo: {
