@@ -2,7 +2,7 @@
 title: 无缝滚动的列表
 date: 2021-06-19T10:00
 authors: Barry
-tags: [Component Idea]
+tags: [CSS, 组件开发思路]
 ---
 
 codesandbox：https://codesandbox.io/s/infinity-scroll-list-u3k4n?file=/src/styles.css
