@@ -77,6 +77,11 @@ const config = {
             label: "Project",
           },
           {
+            label: "小册",
+            position: "right",
+            to: "/tutorial",
+          },
+          {
             label: "Resume",
             position: "right",
             href: "https://github.com/facebook/docusaurus",
