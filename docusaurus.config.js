@@ -26,7 +26,7 @@ const config = {
     defaultLocale: "zh",
     locales: ["zh"],
   },
-
+  // plugins: [require.resolve("docusaurus-lunr-search")],
   presets: [
     [
       "classic",
@@ -45,24 +45,27 @@ const config = {
       }),
     ],
   ],
-
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+      },
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 5,
-      },
-      algolia: {
-        appId: "0OBNE796HF",
-
-        // Public API key: it is safe to commit it
-        apiKey: "d1ca46629d989baf0770ae813a08cd90",
-
-        indexName: "netlify_f5a2c39d-f76f-4ed6-ac05-eb3ac5119cd4_main_all",
-
-        // Optional: see doc section below
-        contextualSearch: true,
       },
       navbar: {
         title: "BarrySong4Real",
