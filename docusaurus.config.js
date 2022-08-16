@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "BarrySong4Real",
   tagline: "Dinosaurs are cool",
-  url: "https://barrysong.netlify.app/",
+  url: "https://www.barrysong4real.cc",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
