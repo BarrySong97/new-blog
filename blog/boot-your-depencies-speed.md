@@ -1,5 +1,5 @@
 ---
-title: 给前端项目配置代码规范工具
+title: 如何加速你的依赖下载速度
 date: 2022-08-05T14:12
 authors: Barry
 tags: [Linux, gitbash, 环境配置]
