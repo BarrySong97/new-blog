@@ -52,18 +52,43 @@ sudo rm /usr/local/bin/com.docker.cli
 sudo apt purge docker-desktop
 ```
 
-安装命令
+安装前置设施
 
 ```bash
 sudo apt-get update
-sudo apt-get install ./docker-desktop-<version>-<arch>.deb
+
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
 ```
 
+设置 Docker 的 GPG key
+
 ```bash
-systemctl --user start docker-desktop
-systemctl --user enable docker-desktop
-systemctl --user stop docker-desktop
+sudo mkdir -p /etc/apt/keyrings
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
+
+设置 Docker 安装地址仓库
+
+```bash
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+开始安装 Docker
+
+```bash
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+启动 Docker
 
 最后是老生常谈的配置国内源，不然速度很慢
 
