@@ -20,13 +20,13 @@ const TutorialList = () => {
   };
   const data: TutorialListItem[] = [
     {
-      name: "如何创建一个自己的组件库(基于vite)",
-      url: "/docs/create-your-own-component-library",
+      name: "AI 绘画",
+      url: "/docs/AI",
       cover:
-        "https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/359ac54a4608421f854b11b27201723c~tplv-k3u1fbpfcp-watermark.image?",
+        "https://cdn.midjourney.com/b944491b-f2eb-4049-b6e2-067870f42640/grid_0.png",
       style: {
         backgroundColor: "#827fff",
-        backgroundImage: `url(${"https://camo.githubusercontent.com/61e102d7c605ff91efedb9d7e47c1c4a07cef59d3e1da202fd74f4772122ca4e/68747470733a2f2f766974656a732e6465762f6c6f676f2e737667"})`,
+        backgroundImage: `url(${"https://cdn.midjourney.com/b944491b-f2eb-4049-b6e2-067870f42640/grid_0.png"})`,
         ...commonStye,
       },
     },

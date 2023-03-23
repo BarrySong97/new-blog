@@ -74,26 +74,21 @@ const config = {
         },
         items: [
           { to: "/blog", label: "Blog", position: "right" },
-          // {
-          //   to: "/project",
-          //   position: "right",
-          //   label: "Project",
-          // },
-          // {
-          //   label: "小册",
-          //   position: "right",
-          //   to: "/tutorial",
-          // },
-          // {
-          //   label: "Resume",
-          //   position: "right",
-          //   href: "https://github.com/facebook/docusaurus",
-          // },
-          // {
-          //   href: "https://github.com/facebook/docusaurus",
-          //   label: "GitHub",
-          //   position: "right",
-          // },
+          {
+            to: "/project",
+            position: "right",
+            label: "Project",
+          },
+          {
+            label: "教程",
+            position: "right",
+            to: "/tutorial",
+          },
+          {
+            label: "Resume",
+            position: "right",
+            href: "https://github.com/facebook/docusaurus",
+          },
           {
             href: "https://github.com/your/repo",
             position: "right",
