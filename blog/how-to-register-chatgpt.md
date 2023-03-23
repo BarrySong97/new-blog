@@ -29,11 +29,7 @@ authors: Barry
 
 ![https://files.catbox.moe/m1e5mb.png](https://files.catbox.moe/m1e5mb.png)
 
-搜索英语添加
-
-![Untitled](%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%B3%A8%E5%86%8CChatgpt%E8%B4%A6%E5%8F%B7%EF%BC%8C%E5%AE%9D%E5%AE%9D%E7%BA%A7%E5%88%AB%E6%95%99%E7%A8%8B%20a1afb4c352c8410eba465aef92e15db5/Untitled.png)
-
-点击英语旁边的三个点
+搜索英语添加,点击英语旁边的三个点
 
 ![https://files.catbox.moe/cjv7jl.png](https://files.catbox.moe/cjv7jl.png)
 
